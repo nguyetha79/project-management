@@ -7,11 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import React from "react";
-import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
-import Link from "next/link";
 import {
   Form,
   FormControl,
@@ -19,9 +14,13 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import { z } from "zod";
+import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
+import { FaGithub } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+import { z } from "zod";
 
 const formSchema = z.object({
   name: z.string().trim().min(1, "Required"),
